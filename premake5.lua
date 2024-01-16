@@ -1,4 +1,4 @@
-project "Brink"
+project "GLFW"
     kind "StaticLib"
     language "C"
 
