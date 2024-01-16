@@ -2,8 +2,8 @@ project "GLFW"
     kind "StaticLib"
     language "C"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("bin/" .. output_directory .. "/%{prj.name}")
+    objdir ("bin-int/" .. output_directory .. "/%{prj.name}")
 
 	files {
         "include/GLFW/glfw3.h",
@@ -18,7 +18,6 @@ project "GLFW"
     }
 
 	filter "system:windows"
-        buildoptions { "-std=c11", "-lgdi32" }
         systemversion "latest"
         staticruntime "On"
 
